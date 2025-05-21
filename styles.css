@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  opacity: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #d76e3f;
+  color: #fff;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar {
+  text-decoration: none;
+  position: fixed;
+  width: 100%;
+  background-color: #b85427;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  z-index: 1000;
+  transition: all 2s ease-in-out;
+  animation: typing 5s infinite;
+}
+
+.nav-links{
+  list-style: none; 
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a{
+  color: white;
+  margin: 10px;
+}
+
+.profile-container {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: opacity 0.75s ease;
+}
+
+.download .button{
+  border: #b85427;
+  transition: opacity 0.75s ease;
+  width: fit-content;
+}
+
+.download-btn{
+  display: flex;
+  background-color: #b85427;
+  padding: 8px 16px;
+  transition: opacity 0.75s ease;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.profile-img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.profile-container:hover .profile-img {
+  transform: scale(1.05);
+}
+
+.profile-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: bottom 0.4s ease-in-out;
+  border-radius: 0 0 10px 10px;
+  font-size: 13px;
+}
+
+.profile-container:hover .profile-overlay {
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
+  gap: 40px;
+  align-items: flex-start;
+  transition: opacity 0.75s ease;
+}
+
+.left {
+  flex: 1;
+  min-width: 250px;
+  transition: opacity 0.75s ease;
+}
+
+.timeline {
+  border-left: 2px solid white;
+  padding-left: 20px;
+  position: relative;
+  margin: 10px;
+  transition: opacity 0.75s ease;
+}
+
+.timeline-entry {
+  margin-bottom: 70px;
+}
+
+.timeline-entry span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.75s ease;
+}
+
+.timeline-entry h4 {
+  margin-top: 5px;
+  font-size: 16px;
+  transition: opacity 0.75s ease;
+}
+
+.center {
+  flex: 2;
+  min-width: 250px;
+  transition: opacity 0.75s ease;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 350;
+  transition: opacity 0.75s ease;
+  margin-left: 20px;
+}
+
+.title a{
+  color: white;
+  transition: opacity 0.75s ease;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  transition: opacity 0.75s ease;
+}
+
+.about {
+  margin-top: 10px;
+  transition: opacity 0.75s ease;
+}
+
+.about h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  transition: opacity 0.75s ease;
+}
+
+.about p {
+  font-size: 14px;
+  line-height: 1.6;
+  transition: opacity 0.75s ease;
+}
+
+.contact {
+  margin-top: 30px;
+  transition: opacity 0.75s ease;
+}
+
+.contact h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  transition: opacity 0.75s ease;
+}
+
+
+.right {
+  flex: 1;
+  min-width: 100px;
+
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 10px;
+  max-width: 350px;
+}
+
+
+@media (max-width: 600px) {
+  .navbar{
+    justify-content: flex-start;
+    display: flex;
+  }
+  .nav-links{
+    font-size: 8px;
+  
+  }
+  .container {
+    flex-direction: column;
+    padding: 50px 20px;
+    align-items: center;
+    font-size: 9px;
+    max-width: 70%;
+  }
+
+  .left, .center, .right {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .timeline {
+    border-left: 2px solid #fff;
+    margin: 10px auto;
+  }
+  .timeline-entry{
+    font-size: 1px;
+    padding: 10px 10px;
+      
+  }
+  .title {
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .about p, .contact h3 {
+    font-size: 13px;
+  }
+
+  .download-btn {
+    margin: 10px auto;
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    padding: 60px 30px;
+    gap: 30px;
+  }
+
+  .left, .center, .right {
+    flex: 1 1 100%;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 901px) {
+  .container {
+    flex-direction: row;
+    padding: 100px;
+  }
+
+  .left, .center, .right {
+    flex: 1;
+  }
+}
